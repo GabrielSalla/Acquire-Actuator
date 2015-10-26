@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gabriel.com.acquire" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseThemeLight" >
+        
+		<!-- Acquisition -->
+        <activity
+            android:name=".acquisition.AcquisitionActivity"
+            android:label="@string/title_activity_acquisition"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <service
+            android:name=".acquisition.AcquisitionService"
+            android:exported="false"
+            android:label="AcquisitionService" >
+        </service>
+        
+        <activity
+            android:name=".acquisition.LoadAcquisitionActivity"
+            android:label="@string/title_activity_load_acquisition"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <activity
+            android:name=".acquisition.RecordsActivity"
+            android:label="@string/title_activity_records"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        <!-- Bluetooth -->
+        <activity
+            android:name=".bluetooth.BtDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <activity
+            android:name=".bluetooth.BtServerActivity"
+            android:label="@string/title_activity_server"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name=".bluetooth.BtService"
+            android:exported="false"
+            android:label="BtService" >
+        </service>
+        
+        
+        <!-- Graph -->
+        <activity
+            android:name=".graph.GraphActivity"
+            android:label="@string/title_activity_graph"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        
+        
+        <!-- Main -->
+        <activity
+            android:name=".main.DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".main.OptionsActivity"
+            android:label="@string/title_activity_options"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <!-- Wifi -->
+        <activity
+            android:name=".wifi.WifiDeviceActivity"
+            android:label="@string/title_activity_wifi_device"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <activity
+            android:name=".wifi.WifiSearchActivity"
+            android:label="@string/title_activity_wifi_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        <activity
+            android:name=".wifi.WifiServerActivity"
+            android:label="@string/title_activity_wifi_server"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <service
+            android:name=".wifi.WifiService"
+            android:exported="false"
+            android:label="WifiService" >
+        </service>
+
+        <activity
+            android:name=".wifi.WifiSetupActivity"
+            android:label="@string/title_activity_wifi_setup"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogThemeLight" >
+        </activity>
+        
+        
+        
+    </application>
+
+</manifest>
